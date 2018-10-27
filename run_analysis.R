@@ -53,3 +53,8 @@ finalData <- rbind(trainData,testData)
 
 colNames <- colnames(finalData)
 
+# 2. Extract only the measurements on the mean and standard deviation for each measurement
+
+
+data_mean_std <-finalData[,grepl("mean|std|subject|activityId",colnames(finalData))]
+
